@@ -1,20 +1,14 @@
 package org.launchcode.models;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 public class User {
+    @NotBlank
     private String username;
     private String email;
+    @NotBlank
     private String password;
-
-    public User() {
-
-    }
-
-    public User(String username, String email, String password) {
-        this();
-        this.username = username;
-        this.email = email;
-        this.password = password;
-    }
 
     public String getUsername() {
         return username;
@@ -40,4 +34,3 @@ public class User {
         this.password = password;
     }
 }
-
